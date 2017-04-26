@@ -65,14 +65,7 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 // Example with grater loading time - loads longer
-                $('.pie_progress_cpu, .pie_progress_mem, .pie_progress_disk').asPieProgress({
-                    namespace: 'pie_progress',
-                    goal: 100,
-                    min: 0,
-                    max: 100,
-                    speed: 50,
-                    easing: 'linear'
-                });
+                $('.pie_progress_cpu, .pie_progress_mem, .pie_progress_disk').asPieProgress({ });
                 getCpu();
                 getMem();
                 getDisk();
