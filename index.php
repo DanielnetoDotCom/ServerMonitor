@@ -44,7 +44,7 @@
             </div>
         </nav>
         <div class="container">
-            <div class="col-xs-12 col-sm-12 col-lg-4" id="cpuDiv">                        
+            <div class="col-xs-12 col-sm-4 col-lg-4" id="cpuDiv">                        
                 <div class="pie_progress_cpu" role="progressbar" data-goal="33">
                     <div class="pie_progress__number">0%</div>
                     <div class="pie_progress__label">CPU</div>
@@ -53,7 +53,7 @@
                 <div class='title'></div>
                 <pre></pre>
             </div>
-            <div class="col-xs-12 col-sm-12 col-lg-4" id="memDiv">
+            <div class="col-xs-12 col-sm-4 col-lg-4" id="memDiv">
                 <div class="pie_progress_mem" role="progressbar" data-goal="33">
                     <div class="pie_progress__number">0%</div>
                     <div class="pie_progress__label">Memory</div>
@@ -62,7 +62,7 @@
                 <div class='title'></div>
                 <pre></pre>
             </div>
-            <div class="col-xs-12 col-sm-12 col-lg-4" id="diskDiv">
+            <div class="col-xs-12 col-sm-4 col-lg-4" id="diskDiv">
                 <div class="pie_progress_disk" role="progressbar" data-goal="33">
                     <div class="pie_progress__number">0%</div>
                     <div class="pie_progress__label">Disk</div>
