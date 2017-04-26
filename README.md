@@ -1,5 +1,5 @@
 # ServerMonitor
-PHP Script to show the server status Memory, CPU and Disk usage
+PHP Script to show the server status Memory, CPU and Disk usage in real time
 
 This script was maded for linux only.
 
