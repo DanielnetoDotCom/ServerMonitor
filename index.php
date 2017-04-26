@@ -25,6 +25,10 @@
                     max-width: 300px;
                 }
             }
+            pre{
+                height: 250px;
+                overflow: scroll;
+            }
         </style>
     </head>
     <body><nav class="navbar navbar-default navbar-fixed-top">
