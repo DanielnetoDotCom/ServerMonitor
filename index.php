@@ -78,7 +78,21 @@
                 <div class='title'></div>
                 <pre></pre>
             </div>
+
+<div class="row">
+    <div class="col-xs-4 col-sm-4 col-lg-4" id="temperatureDiv">
+                <div class="pie_progress_temperature" role="progressbar" data-goal="33">
+                    <div class="pie_progress__number">0°</div>
+                    <div class="pie_progress__label">Temperature</div>
+                </div>
+                <h1>Temperature</h1>
+                <div class='title'></div>
+                <pre></pre>
+            </div>
+</div>
+
         </div>
+
         <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -87,11 +101,25 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 // Example with grater loading time - loads longer
-                $('.pie_progress_cpu, .pie_progress_mem, .pie_progress_disk').asPieProgress({});
+                $('.pie_progress_temperature,.pie_progress_cpu, .pie_progress_mem, .pie_progress_disk').asPieProgress({});
+		getTemp();
                 getCpu();
                 getMem();
                 getDisk();
             });
+
+            function getTemp() {
+                $.ajax({
+                    url: 'temperature.json.php',
+                    success: function (response) {
+                        update('temperature', response);
+                        setTimeout(function () {
+                            getTemp();
+                        }, 1000);
+                    }
+                });
+            }
+
 
             function getCpu() {
                 $.ajax({

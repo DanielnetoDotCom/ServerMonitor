@@ -2,6 +2,29 @@
 
 class ServerMonitor {
 
+
+    static function getTemp() {
+	 $obj = new stdClass();
+        $cmd = "cat /sys/class/thermal/thermal_zone0/temp";
+        exec($cmd . "  2>&1", $output, $return_val);
+        if ($return_val !== 0) {
+            $obj->error = "Get t°  ERROR** " . print_r($output, true);
+            $obj->command = $cmd;
+        } else {
+            $obj->title = "t° Raspberry";
+            $obj->success = 1;
+            $obj->output = $output;
+            $obj->command = $cmd;
+            $obj->percent = 0;
+            $obj->percent = $output[0]/1000;
+//            $obj->percent = intval(self::getServerLoad());
+        }
+        return $obj;
+
+	
+
+    }
+
     static function getCpu() {
         $obj = new stdClass();
         $cmd = "cat /proc/cpuinfo";
